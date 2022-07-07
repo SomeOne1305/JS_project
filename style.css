@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #161616;
+}
+
+.container{
+    width: 100vw;
+    height: 100%;
+}
+
+.menu{
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+}
+
+.menu > button{
+    width: 140px;
+    height: 90%;
+    border-radius: 30px;
+    /* background-color: rgb(174, 245, 241); */
+    background-color: transparent;
+    margin:auto 5px;
+    border:2px solid rgb(92, 0, 128);
+    /* 3px solid rgb(62, 200, 255) */
+}
+
+.menu button > span {
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.menu button:hover{
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, rgb(92, 0, 128), rgb(78, 5, 162), rgb(47, 0, 128) );
+}
+
+.width{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.width > .icons > i{
+    font-size: 15px;
+    color: #fff;
+}
+
+.width >.icons i:nth-of-type(1){
+    animation: left 2s linear infinite;
+}
+.width >.icons i:nth-of-type(2){
+    animation: right 2s linear infinite;
+}
+
+.height{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.height:hover{
+    animation-play-state: running;
+}
+
+.height > .icons{
+    width: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.height > .icons > i{
+    font-size: 15px;
+    color: #fff;
+}
+
+.height >.icons i:nth-of-type(1){
+    animation: up 2s linear infinite;
+}
+.height >.icons i:nth-of-type(2){
+    animation: down 2s linear infinite;
+}
+
+.border{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.square{
+    width: 22px;
+    height: 22px;
+    border: 1px solid #fff;
+    animation: border 3s linear infinite;
+}
+
+.directions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.directions > .icons > i{
+    color: #fff;
+    font-size: 22px;
+}
+
+
+@keyframes border {
+    0%{
+        border: 1px solid #fff;
+    }
+    25%{
+        border: 2px solid red;
+    }
+    50%{
+        border: 3px solid green;
+    }
+    75%{
+        border: 4px solid yellow;
+    }
+}
+
+@keyframes left {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+@keyframes right {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+.horizontal_menu{
+    width: 7vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.window{
+    /* width: 93%;
+    height: 84.7%; */
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.block{
+    width: 200px;
+    height: 300px;
+    border: 2px solid rgb(92, 0, 128);
+}
+
+.directions_settings{
+    width: 100%;
+    height: 84.7%;
+    background-color: #fff;
+}
+
+.colors{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: linear-gradient(red, orange, yellow, green, purple);
+    border: 1px solid red;
+}
+
+
+.colors11{
+    width: 200px;
+    height: 250px;
+    transform: translateX(90px) translateY(-72px);
+    border-radius: 10px;
+    background-color: #302c2c;
+    z-index: 99 !important;
+    padding: 17px;
+    border-top: 2px solid rgb(92, 0, 128);
+    border-right: 2px solid rgb(92, 0, 128);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+}
+
+.colors11 > span::before{
+    width: 37px;
+    height: 37px;
+    border: 2px solid #fff;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+}
+
+.square1{
+    width: 36px;
+    height: 36px;
+    z-index: -99 !important;
+    background-color: #302c2c;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    z-index: -1;
+    position: absolute;
+    top: 9%;
+    left: -6%;
+}
+
